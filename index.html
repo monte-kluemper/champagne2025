@@ -234,7 +234,7 @@
             </div>
             <div>
               <label for="email" class="mb-1 block text-sm font-semibold text-neutral-700">Email</label>
-              <input id="email" name="email" type="email" required class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:border-rotaryGold focus:outline-none" />
+              <input id="email" name="email" type="email" value="mailto:rotarymadridinternational@gmail.com" required class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:border-rotaryGold focus:outline-none" />
             </div>
             <div>
               <label for="mensaje" class="mb-1 block text-sm font-semibold text-neutral-700">Mensaje</label>
@@ -275,10 +275,10 @@
 
       const subject = encodeURIComponent('Consulta Champagne con Propósito');
       const body = encodeURIComponent(
-        `Nombre: ${nombre}\\nEmail: ${email}\\n\\nMensaje:\\n${mensaje}`
+        `${mensaje}`
       );
       // SUGERENCIA: reemplazar '' por el correo del Club, por ejemplo: 'mailto:rotarymadridinternational@gmail.com'
-      const mailto = `mailto:?subject=${subject}&body=${body}`;
+        const mailto = `mailto:rotarymadridinternational@gmail.com?subject=${subject}&body=${body}`;
       window.location.href = mailto;
       return false;
     }
